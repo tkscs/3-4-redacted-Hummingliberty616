@@ -1,8 +1,11 @@
 def redact(original_string):
-    new_string = ""
-    for word in original_string.split(" "):
-        # YOUR CODE HERE
-    return new_string
+    ciphertext = ""
+    for word in original_string.split():
+        if word == word.capitalize():
+            ciphertext = ciphertext + "REDACTED" + " "
+        else: 
+            ciphertext = ciphertext + word + " "
+    print(ciphertext)
 
 eb_bio = "Erin came to Kehillah after getting her PhD in Cognitive Science \
 from Stanford University, where she worked on projects in Natural Language \
